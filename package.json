@@ -19,10 +19,13 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.10.0",
+    "@babel/core": "^7.23.9",
+    "@babel/generator": "^7.23.6",
     "@babel/parser": "^7.23.6",
-    "@babel/traverse": "^7.23.7",
+    "@babel/traverse": "^7.23.9",
     "axios": "^1.6.2",
     "cheerio": "^1.0.0-rc.12",
+    "fs": "0.0.1-security",
     "openai": "^4.24.1",
     "state": "^0.2.0"
   }

@@ -1,7 +1,7 @@
 import DataIngestor from './data-Ingestor/DataIngestor';
 import { DirectoryParser } from './data-Ingestor/DirectoryParser';
 import * as fs from 'fs';
-import { replace_target } from './replaceHtml';
+import { replace_target } from './replace-html';
 
 const dparser = new DirectoryParser()
 const targetPath = 'D:/ts-services/tests/testPlace/src/app'

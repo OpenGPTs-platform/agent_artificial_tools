@@ -21,7 +21,7 @@ export default class DataIngestor {
     }
 
     public static ingestTSCodeBlocks(filePath: string): void {
-        DataIngestor.dataMap[filePath] = extractTSHTMLBlock(filePath);
+        DataIngestor.dataMap[filePath] = extractHtml(filePath);
     }
 
     public static ingestHtmlFile(filePath: string): void {

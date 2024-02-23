@@ -1,7 +1,7 @@
-import { dataGeneratorPromptList } from "../promptManagement/prompts/dataGeneratorPromptList";
+import { DataGeneratorPromptList } from "../prompts/prompts/DataSetGeneratorPrompts";
 import fs from "fs";
 import TheCount from './theCount';
-import { AnthropicGenerator } from "../generatorManagement/anthropic/anthropicGenerator";
+import { AnthropicGenerator } from "../generators/anthropic/AnthropicGenerator";
 
 console.info("Initializing Data Generation");
 const anthropic = new AnthropicGenerator();
@@ -36,7 +36,7 @@ export class AnthropicDataGenerator {
         if (!dataSchema) { throw `No data schema provided`; }
         this.dataSchema = dataSchema;
 
-        if (!requestPrompt) { this.requestPrompt = dataGeneratorPromptList.getItem("DATA_GENERATION_REQUEST_PROMPT"); }
+        if (!requestPrompt) { this.requestPrompt = DataGeneratorPromptList.getItem("DATA_GENERATION_REQUEST_PROMPT"); }
         else {
             this.requestPrompt = requestPrompt;
         }
@@ -101,4 +101,4 @@ export class AnthropicDataGenerator {
 
 
 const generator = new AnthropicDataGenerator();
-generator.generateTestData(dataGeneratorPromptList.getItem("DATA_GENERATION_REQUEST_PROMPT"));
+generator.generateTestData(DataGeneratorPromptList.getItem("DATA_GENERATION_REQUEST_PROMPT"));
